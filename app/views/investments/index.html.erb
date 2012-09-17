@@ -13,8 +13,8 @@
 
 <% @investments.each do |investment| %>
   <tr>
-    <td><%= investment.company_id %></td>
-    <td><%= investment.portfolio_id %></td>
+    <td><%= investment.company.symbol %></td>
+    <td><%= investment.portfolio.description %></td>
     <td><%= investment.cost %></td>
     <td><%= investment.quantity %></td>
     <td><%= link_to 'Show', investment %></td>

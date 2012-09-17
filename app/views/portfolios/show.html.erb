@@ -5,6 +5,15 @@
   <%= @portfolio.description %>
 </p>
 
+  <% @portfolio.investments.each do |investment|%>
+    <%= investment.cost %>
+    <%=investment.company.symbol %>
+    <%= investment.quantity %>
+    <%end%>
+
+<p> worth at cost :<% =@portfolio.worth_at_cost %>    </p>
+<p> worth at today :<% =@portfolio.worth_today %>    </p>
+<p> status :<% =@portfolio.show_profit %>    </p>
 
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
